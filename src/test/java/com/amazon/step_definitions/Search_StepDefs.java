@@ -4,6 +4,7 @@ import com.amazon.pages.BasePage;
 import com.amazon.pages.HomePage;
 import com.amazon.pages.ItemSearchPage;
 import com.amazon.utilities.BrowserUtils;
+import com.amazon.utilities.ConfigurationReader;
 import com.amazon.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,7 +25,7 @@ public class Search_StepDefs {
     @When("user navigates to amazon homepage")
     public void user_navigates_to_amazon_homepage() {
 
-        Driver.getDriver().get("https://www.amazon.com/");
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
         //basePage.login();
 
